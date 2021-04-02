@@ -17,8 +17,6 @@ namespace NeedhamSchroeder
         static void Main(string[] args)
         {
             Socket s = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            Console.WriteLine("Нажмите любую клавишу для подключения");
-            Console.ReadKey();
             s.Connect("127.0.0.1", 8888);
 
             byte[] buffer = new byte[2048];

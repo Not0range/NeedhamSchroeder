@@ -33,11 +33,11 @@ namespace Server
         {
             Socket s = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             s.Bind(new IPEndPoint(IPAddress.Parse("127.0.0.1"), 8888));
+            s.Listen(2);
             Console.WriteLine("Введите p");
             p = BigInteger.Parse(Console.ReadLine());
             Console.WriteLine("Введите g");
             g = BigInteger.Parse(Console.ReadLine());
-            s.Listen(2);
             Console.WriteLine("Сервер готов к работе");
             while(true)
             {
